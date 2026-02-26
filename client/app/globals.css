@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #FF3232;
+  --primary-hover: #E61E1E;
+  --bg-gradient: linear-gradient(135deg, #FF3232 0%, #FF6464 100%);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #FBFBFB;
+  color: #1C1C1C;
+  font-family: var(--font-outfit), var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1C1C1C;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+}
+
+/* Premium Card */
+.premium-card {
+  background-color: white;
+  border-radius: 24px;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.premium-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Premium Input */
+input,
+textarea,
+select {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  padding: 12px 16px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #FF3232;
+  box-shadow: 0 0 0 4px rgba(255, 50, 50, 0.1);
+}
+
+/* Premium Button Elevation */
+.btn-elevated {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px 0 rgba(255, 50, 50, 0.2);
+}
+
+.btn-elevated:hover {
+  box-shadow: 0 6px 20px rgba(255, 50, 50, 0.23);
+  transform: translateY(-1px);
+}
+
+.btn-elevated:active {
+  transform: scale(0.95);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #E2E8F0;
+  border-radius: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.empty-state-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #f9fafb;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+  margin-bottom: 24px;
+}
